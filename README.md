@@ -16,7 +16,10 @@ https://user-images.githubusercontent.com/106715980/176570977-15f9990f-f2eb-4e7b
 
 <img width= "500" height = "550" src= "https://user-images.githubusercontent.com/106715980/176573268-09a15263-f2df-4569-bb26-8e0b2712be11.JPG">
 
+# What I learned
+The most difficult part of the project for me was figuring out how to have the Arduino communicate with the python code through the serial port. I learned that the port cannot send and recieve data at the same time. After learning the approproate python libraries, and which side of the port should be opened at a given time, I got them communicating. This opens up a whole world of projects I can do with the arduino and python code in thr future.
 
-
+# Steps Moving Forward
+At the time of creation I was limited to one active buzzer. If I were able to aquire another one, I would love to explore the use of chords (multiple fingers activating a key at once). Although I used a pretrained hand model from google, it got me super curious and creating my own machine learning model, so that is what I will work on in my next project!
 
 
