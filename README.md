@@ -1,5 +1,5 @@
 # Touchless-Keyboard
-I created a touchless keyboard that identifies finger strokes via computer vision and outputs sound with a buzzer controlled by an Arduino microcontroller. I used Google's `MediaPipe`, a pretrained model for hand detection. The distances between each landmark (red dots) on the hand  were initially measured by ratios which were relative to the output screen. Using `OpenCV` library, I found the dimensions of my webcam in pixels and multiplied the total length and witdh of my screen by these ratios in order to get proper x,y coordinates for each landmark. To activate a note certain landmark's y-coordinates must fall below the y-coordinate of another specific landmark. This information is sent to the Arduino, I used the `serial` library to help with this. Depending on what information python was sending through the serial port (notes in this case) the Arduino had corresponding frequencies the buzzer must play for each note. 
+I created a touchless keyboard that identifies finger strokes via computer vision and outputs sound with a buzzer controlled by an Arduino microcontroller. I used Google's `MediaPipe`, a pretrained model for hand detection. The distances between each landmark (red dots) on the hand  were initially measured by ratios which were relative to the output screen. Using `OpenCV` library, I found the dimensions of my webcam in pixels and multiplied the total length and witdh of my screen by these ratios in order to get proper x,y coordinates for each landmark. To activate a note certain landmark's y-coordinates must fall below the y-coordinate of another specific landmark. This information is sent to the Arduino, I used the `serial` library to help with this. Depending on what information python was sending through the serial port (musical notes in this case) the Arduino had corresponding frequencies the buzzer must play for each note. 
 
 `Skills used`: Python, C++, OpenCV, Mediapipe, Circuiting, Python-Arduino communication
 
@@ -11,6 +11,12 @@ https://user-images.githubusercontent.com/106715980/176570977-15f9990f-f2eb-4e7b
 - `OpenCV`
 - `Serial`
 
+# Hand Landmark Legend
+
+<img width= "650" height = "300" src= "https://user-images.githubusercontent.com/106715980/178525565-234f2e00-aedb-4ded-a2da-be23b37f5e86.png">
+These landmarks all had an x,y coordinate associated with them and specific notes were activated when certain landmarks passed another landmarks y-coordinate. For example, when landmark 8's y-coordinate is greater than landmark 6's y-coordinate, the note D is passed to the Arduino. For reference, when working with pixels, this is how the coordinate grid is situated:
+
+![Pixel Coordinates](https://user-images.githubusercontent.com/106715980/178527794-232fe555-97b2-4c38-8631-de90fca436f1.png)
 
 # Simple Arduino buzzer circuit 
 
