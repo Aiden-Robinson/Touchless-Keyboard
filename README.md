@@ -7,9 +7,9 @@ I created a touchless keyboard that identifies finger strokes via computer visio
 https://user-images.githubusercontent.com/106715980/176570977-15f9990f-f2eb-4e7b-b237-7e93516a3fc2.mp4
 
 # Python Libaries Used
-- `Google's Mediapipe` was used to 
-- `OpenCV`
-- `Serial`
+- `Google's Mediapipe` is used to for the hand tracking model
+- `OpenCV` is used for accessing the webcam and drawing the circles when a note is activated
+- `Serial` is used to send information from the python code to the arduino IDE through the serial port
 
 # Hand Landmark Legend
 
